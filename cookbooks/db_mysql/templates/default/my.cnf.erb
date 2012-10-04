@@ -76,13 +76,7 @@ query_cache_size        = <%= node[:db_mysql][:tunable][:query_cache_size] %>
 <%= node[:db_mysql][:tunable][:long_query_time] %>
 log-queries-not-using-indexes
 
-<%= "read_only = 1" unless node[:db_mysql][:tunable][:read_only] == nil %>
-server-id               = <%= @server_id %>
-<% if node[:db_mysql][:log_bin_enabled] %>
-<%= "log_bin = #{node[:db_mysql][:log_bin]}" %>
-<%= "expire_logs_days        = #{node[:db_mysql][:tunable][:expire_logs_days]}" %>
-<% end %>
-max_binlog_size         = 100M
+
 #
 # * InnoDB
 #
@@ -112,7 +106,7 @@ innodb_support_xa = 1
 innodb_flush_method=O_DIRECT
 innodb_fast_shutdown = 1
 
-log-bin=<%=node[:db_mysql][:log_bin] %>
+#log-bin=<%=node[:db_mysql][:log_bin] %>
 relay-log-index=<%= node[:db][:data_dir] %>/<%= @relay_log %>-relay-log.index
 relay-log=<%= node[:db][:data_dir] %>/<%= @relay_log %>-relay-bin
 
