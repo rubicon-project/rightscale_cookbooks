@@ -1,0 +1,29 @@
+{
+  "suggestions": {
+  },
+  "attributes": {
+  },
+  "conflicting": {
+  },
+  "description": "Install customer my.cnf file",
+  "dependencies": {
+  },
+  "providing": {
+  },
+  "maintainer": "RightScale, Inc.",
+  "replacing": {
+  },
+  "version": "0.0.1",
+  "maintainer_email": "",
+  "name": "db_mysql",
+  "recipes": {
+  },
+  "groupings": {
+  },
+  "long_description": "= DESCRIPTION:\n\nOverride the my.cnf installed by RightScale db_mysql cookbook.\n\n= REQUIREMENTS:\n\n= ATTRIBUTES: \n\nSee metadata.rb \n\n= USAGE:\n\n  * Clone this repo.  Clone the \"Database Manager for MySQL 5.1 (Chef)\" template.  Clone the \"RightScale Premium\" repo path.  Add this cookbook to the top.  Change the repo path on the cloned templated.\n  * Edit the my.cnf.erb file.  This is the configuration that will be installed.  \n\n",
+  "recommendations": {
+  },
+  "platforms": {
+  },
+  "license": ""
+}
