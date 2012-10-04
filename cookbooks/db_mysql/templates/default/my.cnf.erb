@@ -34,7 +34,7 @@ user            = mysql
 #pid-file        = /var/run/mysqld/mysqld.pid
 socket          = <%= node[:db_mysql][:socket] %>
 port            = 3306
-datadir         = <%= node[:db_mysql][:datadir] %>
+datadir         = /mnt/ephemeral/data
 tmpdir          = <%= node[:db_mysql][:tmpdir] %>
 
 skip-external-locking
